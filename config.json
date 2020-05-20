@@ -1,0 +1,14 @@
+{
+"trading" : {
+    "account_risk" : "",
+    "take_profit": 1
+    },
+"indicator_inputs" : {
+    "atr_length" : 14,
+    "atr_stop_mult" : 3
+    },
+"api_keys" : {
+    "id": "",
+    "secret": ""
+    }
+}
