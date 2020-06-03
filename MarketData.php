@@ -10,7 +10,7 @@ class MarketData extends BitMex {
 
     public $config, $last_indicator_values;
     public $open, $high, $low, $close, $previous_close;
-    private $candle_data;
+    public $candle_data;
     
     
 
@@ -50,10 +50,10 @@ class MarketData extends BitMex {
 
 
 
-    private function GetMarketData(): array {
+    public function GetMarketData(): array {
 
-        $candlesBufferArray = $this->getCandles("5m", 15);
-        //$candlesBufferArray = $this->makeCandles("5m", 63);
+        //$candlesBufferArray = $this->getCandles("5m", 15);
+        $candlesBufferArray = $this->makeCandles("5m", 45); #45 velas de 5m para sacar 15 velas de 15m
 
         #   create arrays for highs, lows and closes for indicator calc
         foreach($candlesBufferArray as $candle){

@@ -2,7 +2,14 @@
 
 require 'vendor/autoload.php';
 
-$bitmex = new App\BitMex ("zitINFv608cwQAWJQumd8YGy", "6swulefXUpsXhhZRt3ql2LbVWMMKP2HdKTXsS6PbulxgZTDu");
+$bot = new App\Bot();
+
+echo "make candles" . PHP_EOL;
+var_dump($bot->MakeCandles("5m", 45));
 
 
-var_dump($bitmex->closePosition(NULL));
+echo "candle data" . PHP_EOL;
+var_dump($bot->candle_data);
+
+echo "close" . PHP_EOL;
+var_dump($bot->close);
